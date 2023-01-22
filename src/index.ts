@@ -26,7 +26,7 @@ export default {
 		if(request.method === "POST")
 		{
 			var formData: FormData = await request.formData();
-			var alias = formData.get("alias");
+			var alias = formData.get("alias")?.toLowerCase();
 			var url = formData.get("url");
 			if(!alias || !url)
 			{
@@ -54,7 +54,7 @@ export default {
 			var shortform: string = request.url.split("/")[3];
 			if(shortform)
 			{
-				var mapping = await env.MAPPINGS.get(shortform);
+				var mapping = await env.MAPPINGS.get(shortform.toLowerCase());
 				if(mapping)
 				{
 					var response = new Response(null,{status: 301, headers: {
