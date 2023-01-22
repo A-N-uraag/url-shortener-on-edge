@@ -1,0 +1,7 @@
+name = "url-minifier"
+main = "src/index.ts"
+compatibility_date = "2023-01-22"
+account_id = "3c043ff0b3f212c73e24d6d98f79da2c"
+kv_namespaces = [
+    { binding = "MAPPINGS", id = "6bb22b2eb7ba443c8b775b413a4ff9f5", preview_id = "a19c68f6f2e64635a7b7934d65c820bc" }
+]
