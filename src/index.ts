@@ -41,6 +41,9 @@ export default {
 					}
 				});
 			}
+			if(url.substring(0,3)!=="htt"){
+				url = "http://"+url;
+			}
 			await env.MAPPINGS.put(alias, url);
 			return new Response(succ_p1+alias+succ_p2+alias+succ_p3, {
 				headers: {
